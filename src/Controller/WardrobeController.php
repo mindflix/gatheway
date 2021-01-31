@@ -13,6 +13,6 @@ class WardrobeController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->redirectToRoute('root');
+        return $this->render('wardrobe/index.html.twig');
     }
 }
