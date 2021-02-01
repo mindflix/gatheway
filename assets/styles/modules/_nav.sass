@@ -1,3 +1,11 @@
+span
+  position: relative
+  align-content: center
+  font-weight: 600
+  font-size: 13px
+  letter-spacing: 2px
+  padding: 10px 0
+
 li
   position: relative
   list-style: none
@@ -118,6 +126,8 @@ ion-icon
     height: 3vh
     display: flex
     justify-content: center
+    transition: ease-in-out 0.4s
+    overflow: hidden
 
     @media (max-width: 1180px)
       display: none
@@ -128,23 +138,33 @@ ion-icon
       cursor: pointer
       padding: 0 20px 20px 20px
 
-    span
-      position: relative
-      align-content: center
-      font-weight: 600
-      font-size: 13px
-      letter-spacing: 2px
-
 #menu-sidebar
   position: fixed
-  top: 85px
+  top: 0
   left: -61%
   width: 60%
   height: 100%
-  border-right: $black 2px solid
   background: $white
   z-index: 19
+  padding-top: 100px
   transition: ease-in-out 0.4s
 
 .active
   transform: translate(100%,0)
+
+.disable
+  height: 0
+
+.menu--links
+  position: relative
+  display: flex
+  justify-content: center
+  flex-direction: colum
+  flex-wrap: wrap
+
+  li
+    position: relative
+    display: flex
+    width: 100%
+    justify-content: center
+    align-items: center
