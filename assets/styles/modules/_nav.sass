@@ -9,11 +9,12 @@ ion-icon
   padding-top: 6px
 
 .nav
-  position: fixed
+  position: sticky
   width: 100%
   top: 0
   left: 0
   flex-direction: column
+  z-index: 20
   background: $white
   color: $black
   border-top: $black 0.6vh solid
@@ -32,6 +33,7 @@ ion-icon
     @media (max-width: 1180px)
       margin: 0
       width: 100vw
+      height: 80px
       justify-content: space-around
 
   &--logo
@@ -66,7 +68,7 @@ ion-icon
 
   &--left
     position: relative
-    width: 300px
+    width: 400px
     padding: 0
 
     li
@@ -94,7 +96,7 @@ ion-icon
 
   &--right
     position: relative
-    width: 300px
+    width: 400px
     display: flex
     justify-content: flex-end
     align-items: center
@@ -133,5 +135,16 @@ ion-icon
       font-size: 13px
       letter-spacing: 2px
 
-    span:hover
-      color: $highlight
+#menu-sidebar
+  position: fixed
+  top: 85px
+  left: -61%
+  width: 60%
+  height: 100%
+  border-right: $black 2px solid
+  background: $white
+  z-index: 19
+  transition: ease-in-out 0.4s
+
+.active
+  transform: translate(100%,0)

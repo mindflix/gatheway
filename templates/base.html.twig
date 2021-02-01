@@ -17,6 +17,30 @@
         {% endblock %}
     </head>
     <body>
+        <nav class="nav">
+            <div class="nav--container">
+                <ul id="menu-btn" class="nav--left">
+                <li><ion-icon name="menu-outline"></ion-icon><p>MENU</p></li>
+                </ul>
+                <div class="nav--logo">
+                <h1>Gatheway</h1>
+                </div>
+                <ul class="nav--right">
+                <li><ion-icon name="search-outline"></ion-icon></li>
+                <li><ion-icon name="person-outline"></ion-icon></li>
+                <li><ion-icon name="pricetags-outline"></ion-icon></li>
+                </ul>
+            </div>
+            <div class="nav--links">
+                <li><span>Home</span></li>
+                <li><span>Wardrobe</span></li>
+                <li><span>News</span></li>
+                <li><span>Team</span></li>
+                <li><span>Contact</span></li>
+            </div>
+        </nav>
+        <div id="menu-sidebar">
+        </div>
         {% block body %}
         {% endblock %}
     </body>
