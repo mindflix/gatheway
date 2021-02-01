@@ -1,0 +1,85 @@
+.nav
+  position: fixed
+  top: 0
+  left: 0
+  flex-direction: column
+  background: $white
+  color: $black
+  border-top: $black 0.6vh solid
+  text-transform: uppercase
+
+  &--container
+    position: relative
+    width: 80vw
+    margin: 0 10vw
+    height: 7.6vh
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+
+  &--logo
+    position: relative
+    height: 7vh
+    width: 270px
+    display: flex
+    align-items: center
+    justify-content: center
+
+    img
+      width: 50px
+      padding-right: 4px
+      align-self: center
+
+      @media (max-width: 1180px)
+        display: none
+
+    h1
+      margin: 8px 0 0 0
+      font-size: 36px
+
+  &--left
+    position: relative
+    width: 200px
+
+  &--right
+    position: relative
+    width: 200px
+    display: flex
+    justify-content: flex-end
+    align-items: center
+
+    li
+      position: relative
+      list-style: none
+      cursor: pointer
+      padding: 6px 0 0 20px
+
+    ion-icon
+      font-size: 20px
+
+  &--links
+    position: relative
+    width: 100vw
+    height: 3vh
+    display: flex
+    justify-content: center
+
+    @media (max-width: 1180px)
+      display: none
+
+    li
+      position: relative
+      list-style: none
+      cursor: pointer
+      padding: 0 20px 20px 20px
+
+    span
+      position: relative
+      align-content: center
+      font-weight: 600
+      font-size: 13px
+      letter-spacing: 2px
+
+    span:hover
+      color: $highlight
