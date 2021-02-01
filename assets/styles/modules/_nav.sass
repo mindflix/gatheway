@@ -5,7 +5,7 @@ li
   padding: 10px
 
 ion-icon
-  font-size: 20px
+  font-size: 24px
   padding-top: 6px
 
 .nav
@@ -88,9 +88,9 @@ ion-icon
         padding: 0 2px
         font-size: 32px
 
-      @media (max-width: 640px)
-        p
-          display: none
+    @media (max-width: 640px)
+      p
+        display: none
 
   &--right
     position: relative
@@ -105,6 +105,10 @@ ion-icon
 
       li
         padding: 4px
+
+    @media (max-width: 640px)
+      li:nth-child(n+2)
+        display: none
 
   &--links
     position: relative
