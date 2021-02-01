@@ -1,5 +1,16 @@
+li
+  position: relative
+  list-style: none
+  cursor: pointer
+  padding: 10px
+
+ion-icon
+  font-size: 20px
+  padding-top: 6px
+
 .nav
   position: fixed
+  width: 100%
   top: 0
   left: 0
   flex-direction: column
@@ -7,16 +18,21 @@
   color: $black
   border-top: $black 0.6vh solid
   text-transform: uppercase
+  justify-content: center
 
   &--container
     position: relative
     width: 80vw
-    margin: 0 10vw
     height: 7.6vh
+    margin: 0 auto
     display: flex
-    flex-wrap: wrap
-    justify-content: space-between
+    justify-content: center
     align-items: center
+
+    @media (max-width: 1180px)
+      margin: 0
+      width: 100vw
+      justify-content: space-around
 
   &--logo
     position: relative
@@ -31,32 +47,64 @@
       padding-right: 4px
       align-self: center
 
-      @media (max-width: 1180px)
-        display: none
-
     h1
       margin: 8px 0 0 0
       font-size: 36px
 
+    @media (max-width: 1180px)
+      width: 30vw
+
+      img
+        display: none
+
+      h1
+        font-size: 28px
+        margin-top: 4px
+    @media (max-width: 640px)
+      h1
+        font-size: 20px
+
   &--left
     position: relative
-    width: 200px
+    width: 300px
+    padding: 0
+
+    li
+      display: none
+
+    @media (max-width: 1180px)
+      width: 20vw
+
+      li
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 0
+
+      p
+        padding-top: 4px
+
+      ion-icon
+        padding: 0 2px
+        font-size: 32px
+
+      @media (max-width: 640px)
+        p
+          display: none
 
   &--right
     position: relative
-    width: 200px
+    width: 300px
     display: flex
     justify-content: flex-end
     align-items: center
+    padding: 0
 
-    li
-      position: relative
-      list-style: none
-      cursor: pointer
-      padding: 6px 0 0 20px
+    @media (max-width: 1180px)
+      width: 20vw
 
-    ion-icon
-      font-size: 20px
+      li
+        padding: 4px
 
   &--links
     position: relative
