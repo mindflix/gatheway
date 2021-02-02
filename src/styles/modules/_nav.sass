@@ -1,0 +1,171 @@
+nav
+  position: sticky
+  top: 0
+  z-index: 20
+
+span
+  position: relative
+  align-content: center
+  font-weight: 600
+  font-size: 13px
+  letter-spacing: 2px
+  padding: 10px 0
+
+li
+  position: relative
+  list-style: none
+  cursor: pointer
+  padding: 10px
+
+.nav
+  position: relative
+  width: 100%
+  z-index: 19
+  top: 0
+  left: 0
+  flex-direction: column
+  background: $white
+  color: $black
+  border-top: $black 0.6vh solid
+  text-transform: uppercase
+  justify-content: center
+
+  &--container
+    position: relative
+    width: 80vw
+    height: 7.6vh
+    margin: 0 auto
+    display: flex
+    justify-content: center
+    align-items: center
+
+    @media (max-width: 1180px)
+      margin: 0
+      width: 100vw
+      height: 80px
+      justify-content: space-around
+
+  &--logo
+    position: relative
+    height: 7vh
+    width: 270px
+    display: flex
+    align-items: center
+    justify-content: center
+
+    img
+      width: 50px
+      padding-right: 4px
+      align-self: center
+
+    h1
+      margin: 8px 0 0 0
+      font-size: 36px
+
+    @media (max-width: 1180px)
+      width: 30vw
+
+      img
+        display: none
+
+      h1
+        font-size: 28px
+        margin-top: 4px
+    @media (max-width: 640px)
+      h1
+        font-size: 20px
+
+  &--left
+    position: relative
+    width: 400px
+    padding: 0
+
+    li
+      display: none
+
+    @media (max-width: 1180px)
+      width: 20vw
+
+      li
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        padding: 0
+
+      p
+        padding-top: 2px
+
+    @media (max-width: 640px)
+      p
+        display: none
+
+  &--right
+    position: relative
+    width: 400px
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    padding: 0
+
+    @media (max-width: 1180px)
+      width: 20vw
+
+      li
+        padding: 4px
+        display: flex
+        justify-content: center
+        align-items: center
+
+    @media (max-width: 640px)
+      li:nth-child(n+2)
+        display: none
+
+  &--links
+    position: relative
+    width: 100vw
+    height: 3vh
+    display: flex
+    justify-content: center
+    transition: ease-in-out 0.4s
+    overflow: hidden
+
+    @media (max-width: 1180px)
+      display: none
+
+    li
+      position: relative
+      list-style: none
+      cursor: pointer
+      padding: 0 20px 20px 20px
+
+.active
+  transform: translate(100%,0)
+
+.disable
+  height: 0
+
+.menu
+  position: fixed
+  top: 0
+  left: -61%
+  width: 60%
+  height: 100%
+  background: $white
+  z-index: 18
+  padding-top: 100px
+  transition: ease-in-out 0.4s
+
+  &--links
+    position: relative
+    display: flex
+    justify-content: center
+    flex-direction: colum
+    flex-wrap: wrap
+    padding: 4vh 0
+
+  li
+    position: relative
+    display: flex
+    width: 100%
+    justify-content: center
+    align-items: center
