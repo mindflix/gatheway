@@ -1,8 +1,3 @@
-nav
-  position: sticky
-  top: 0
-  z-index: 20
-
 span
   position: relative
   align-content: center
@@ -18,7 +13,7 @@ li
   padding: 10px
 
 .nav
-  position: relative
+  position: sticky
   width: 100%
   z-index: 19
   top: 0
@@ -139,20 +134,20 @@ li
       padding: 0 20px 20px 20px
 
 .active
-  transform: translate(100%,0)
+  transform: translate(99.99%,0)
 
 .disable
   height: 0
 
 .menu
   position: fixed
-  top: 0
-  left: -61%
-  width: 60%
+  top: 80px
+  left: -100vw
+  width: 100vw
   height: 100%
   background: $white
   z-index: 18
-  padding-top: 100px
+  padding-top: 20px
   transition: ease-in-out 0.4s
 
   &--links

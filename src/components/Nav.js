@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   IoMenuOutline,
   IoSearchOutline,
@@ -8,25 +8,50 @@ import {
 
 function Nav() {
   const [isActive, setActive] = useState(false);
-  const [isTop, setTop] = useState(false);
+  const [isTop, setTop] = useState(true);
+  const [scrollY, setScrollY] = useState(0);
 
-  const handleMenu = () => {
-    setActive(!isActive);
-  };
-
-  const handleScroll = () => {
-    if (window.scrollY > 100) {
-      setTop(true);
+  const stopScroll = () => {
+    const body = document.querySelector("body");
+    if (isActive) {
+      body.style.overflow = "visible";
     } else {
-      setTop(false);
+      body.style.overflow = "hidden";
     }
   };
 
-  window.addEventListener("scroll", handleScroll);
+  const handleMenu = () => {
+    setActive(!isActive);
+    stopScroll();
+  };
+  let security = false;
+
+  function logit() {
+    let diff = window.pageYOffset - scrollY;
+    if (diff > 5 && security === false) {
+      setTop(false);
+    }
+    if (diff < -5 && security === false) {
+      setTop(true);
+    }
+    if (Math.abs(diff) <= 1) {
+      security = true;
+    } else {
+      security = false;
+    }
+    setScrollY(window.pageYOffset);
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", logit);
+    return () => {
+      window.removeEventListener("scroll", logit);
+    };
+  });
 
   return (
-    <nav>
-      <div className="nav">
+    <React.Fragment>
+      <nav className="nav">
         <div className="nav--container">
           <ul onClick={handleMenu} className="nav--left">
             <li>
@@ -49,7 +74,7 @@ function Nav() {
             </li>
           </ul>
         </div>
-        <div className={isTop ? "nav--links disable" : "nav--links"}>
+        <div className={isTop ? "nav--links" : "nav--links disable"}>
           <li>
             <span>Femme</span>
           </li>
@@ -69,7 +94,7 @@ function Nav() {
             <span>Contact</span>
           </li>
         </div>
-      </div>
+      </nav>
       <div className={isActive ? "menu active" : "menu"}>
         <div className="menu--links">
           <li>
@@ -92,7 +117,7 @@ function Nav() {
           </li>
         </div>
       </div>
-    </nav>
+    </React.Fragment>
   );
 }
 

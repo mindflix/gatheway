@@ -1,13 +1,14 @@
+import React from "react";
 import "./styles/main.sass";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
 
 function App() {
   return (
-    <div>
+    <React.Fragment>
       <Nav />
       <Home />
-    </div>
+    </React.Fragment>
   );
 }
 
