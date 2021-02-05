@@ -18,8 +18,10 @@ function Home() {
 
   return (
     <div className="l-viewport">
-        <img src={section1} className="parallax" style={{ transform: `translate3d(0,${-offsetY*0.01}vh,0)` }} />
-        <img src={section2} className="parallax" style={{ transform: `translate3d(0,${-offsetY*0.06 - 30}vh,0)` }}/>
+      <div className="parallax">
+        <img src={section1} style={{ transform: `translate3d(0,${-offsetY *0.01}vh,0)` }} alt="section1" />
+        <img src={section2} style={{ transform: `translate3d(0,${-offsetY * 0.06 }vh,0)`, top: "-30px" }} alt="section1"/>
+      </div>
     </div>
   );
 }
