@@ -8,13 +8,14 @@ import article from "../images/article.jpg";
 function Home() {
   const [offsetY, setOffsetY] = useState(0);
   const [isMobile, setMobile] = useState(undefined);
+  let screenSize = window.innerWidth;
 
   function handleScroll() {
     setOffsetY(window.pageYOffset);
   }
 
-  function handleScreen() {
-    if (window.innerWidth > 1180) {
+  function handleScreen(screenSize) {
+    if (screenSize > 1180) {
       setMobile(false);
     } else {
       setMobile(true);
@@ -29,8 +30,8 @@ function Home() {
   }, []);
 
   useEffect(() => {
-    handleScreen();
-  }, []);
+    handleScreen(screenSize);
+  }, [screenSize]);
 
   return (
     <React.Fragment>
