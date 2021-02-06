@@ -1,13 +1,11 @@
-.l-viewport
-  width: 100vw
-  height: 200vh
 
-.overlay
-  position: absolute
-  background-color: rgba(0, 0, 0,0.5 )
-  z-index: 0
-  width: 100vw
-  height: 60vh
+.parallax
+  position: relative
+
+.viewport
+  position: relative
+  background-color: $white
+  box-shadow: 0 1px 6px $shadow
 
 img
   position: relative
@@ -15,9 +13,55 @@ img
   background-position: 40% 0%
   background-repeat: no-repeat
   width: 100%
-  box-shadow: 0 4px 60px 1px $muted-gray
 
-.parallax
+.text--banner
   position: relative
+  display: flex
+  color: $highlight
+
+  height: 20vw
+  margin: auto
+  align-items: center
+
+  h1
+    font-size: 5vw
+    text-transform: uppercase
+    margin: auto
 
 .container
+  position: relative
+  margin: 0 auto
+  display: flex
+  justify-content: center
+  flex-direction: column
+  width: 1200px
+  box-sizing: border-box
+  padding: 0 0 6vw 0
+
+  @media (max-width: 1180px)
+    width: 90vw
+
+.wrapper
+  position: relative
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-gap: 8vw
+  grid-auto-rows: minmax(100px, auto)
+
+  @media (max-width: 1180px)
+    grid-template-columns: repeat(2, 1fr)
+
+  &--article
+    transition: ease-in-out 0.4s
+    h3
+      margin: 0 10px
+
+    &:hover
+      color: $highlight
+
+    img
+      transition: ease-in-out 0.3s
+      border: 2px $black dotted
+
+      &:hover
+        box-shadow: 8px 8px 8px $black
