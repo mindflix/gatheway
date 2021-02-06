@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import * as ROUTES from "../constants/routes";
+import { Link } from "react-router-dom";
 import {
   IoMenuOutline,
   IoSearchOutline,
@@ -33,29 +35,31 @@ function Nav() {
               <p>MENU</p>
             </li>
           </ul>
-          <div className="nav--logo">
+          <Link className="nav--logo link" to={ROUTES.LANDING}>
             <h1>Gatheway</h1>
-          </div>
+          </Link>
           <ul className="nav--right">
             <li>
               <IoSearchOutline size={24} />
             </li>
             <li>
-              <IoPersonOutline size={24} />
+              <Link className="link" to={ROUTES.LOGIN}>
+                <IoPersonOutline size={24} />
+              </Link>
             </li>
             <li>
               <IoPricetagsOutline size={24} />
             </li>
           </ul>
         </div>
-        <Links />
+        <NavLinks />
       </nav>
       <Menu isActive={isActive} />
     </React.Fragment>
   );
 }
 
-function Links() {
+function NavLinks() {
   const [isTop, setTop] = useState(true);
   const [scrollY, setScrollY] = useState(0);
 
@@ -105,6 +109,11 @@ function Menu(props) {
   return (
     <div className={props.isActive ? "menu active" : "menu"}>
       <div className="menu--links">
+        <li>
+          <Link to={ROUTES.LOGIN}>
+            <button className="btn">Se connecter</button>
+          </Link>
+        </li>
         <li>
           <span>Femme</span>
         </li>

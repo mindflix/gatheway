@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 
-import section2 from "../images/section4.jpg";
-import section1 from "../images/section3mobile.jpg";
-import section3 from "../images/section3.jpg";
+import section2 from "../images/section2.jpg";
+import section2m from "../images/section2m.jpg";
+import section1 from "../images/section1m.jpg";
+import section1m from "../images/section1.jpg";
 import article from "../images/article.jpg";
 
-function Home() {
+function Landing() {
   const [offsetY, setOffsetY] = useState(0);
   const [isMobile, setMobile] = useState(undefined);
   let screenSize = window.innerWidth;
@@ -37,22 +38,24 @@ function Home() {
     <React.Fragment>
       <div
         className="parallax"
-        style={{ top: `${offsetY * 0.02}vh`, zIndex: 1 }}
+        style={{
+          top: `${offsetY * 0.02}vh`,
+          zIndex: 1,
+        }}
       >
         <div className="parallax--bg">
-          <img src={isMobile ? section1 : section3} alt="section1" />
+          <img src={isMobile ? section1 : section1m} alt="section1" />
         </div>
         <div
           className="parallax--content"
           style={{ transform: `translate3d(0,${-offsetY * 0.02}vh,0)` }}
         >
-          <div className="section"></div>
-          <div className="viewport">
+          <div className="wrapper">
             <div className="container">
               <div className="text--banner">
                 <h1>#nouvelle collection</h1>
               </div>
-              <div className="wrapper">
+              <div className="grid">
                 <Article />
                 <Article />
                 <Article />
@@ -66,22 +69,24 @@ function Home() {
       </div>
       <div
         className="parallax"
-        style={{ top: `${-offsetY * 0.005}vh`, zIndex: 0 }}
+        style={{
+          top: `${6 - offsetY * 0.01}vh`,
+          zIndex: 0,
+        }}
       >
         <div className="parallax--bg">
-          <img src={section2} alt="section1" />
+          <img src={isMobile ? section2m : section2} alt="section1" />
         </div>
         <div
           className="parallax--content"
-          style={{ transform: `translate3d(0,${10 - offsetY * 0.02}vh,0)` }}
+          style={{ transform: `translate3d(0,${20 - offsetY * 0.02}vh,0)` }}
         >
-          <div className="section"></div>
-          <div className="viewport">
+          <div className="wrapper">
             <div className="container">
               <div className="text--banner">
                 <h1>La Sélection Printemps</h1>
               </div>
-              <div className="wrapper">
+              <div className="grid">
                 <Article />
                 <Article />
                 <Article />
@@ -89,9 +94,6 @@ function Home() {
                 <Article />
                 <Article />
               </div>
-            </div>
-            <div className="text--banner">
-              <h1>Notre favori</h1>
             </div>
           </div>
         </div>
@@ -102,11 +104,11 @@ function Home() {
 
 function Article() {
   return (
-    <div className="wrapper--article">
+    <div className="grid--article">
       <img src={article} alt="article" />
-      <h3>Balenciaga</h3>
+      <h3>.Balenciaga</h3>
     </div>
   );
 }
 
-export default Home;
+export default Landing;
