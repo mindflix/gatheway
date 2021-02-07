@@ -1,3 +1,4 @@
+
 .form
     position: relative
     display: block
@@ -15,7 +16,7 @@
         @media ( max-width: 1180px )
             width: 80vw
 
-    &--name
+    input
         position: relative
         border: 1px $black solid
         box-shadow: 2px 2px 2px $black
@@ -23,3 +24,23 @@
         outline: none
         height: 20px
         padding: 10px
+
+    p
+        cursor: pointer
+        margin: auto
+        padding-top: 6px
+        text-decoration: underline
+
+.oneview
+    top: 10vh
+    position: absolute
+    width: 100vw
+    height: 90vh
+    overflow: hidden
+
+    .motif
+        background-image: url("../../images/motif.png")
+        background-repeat: repeat
+        background-size: 600px
+        width: 100vw
+        height: 100%

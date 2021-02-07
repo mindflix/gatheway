@@ -14,7 +14,7 @@ function Nav() {
   function stopScroll() {
     const body = document.querySelector("body");
     if (isActive) {
-      body.style.overflow = "visible";
+      body.style.overflow = "";
     } else {
       body.style.overflow = "hidden";
     }
@@ -54,7 +54,7 @@ function Nav() {
         </div>
         <NavLinks />
       </nav>
-      <Menu isActive={isActive} />
+      <Menu isActive={isActive} handleMenu={handleMenu} />
     </React.Fragment>
   );
 }
@@ -111,7 +111,9 @@ function Menu(props) {
       <div className="menu--links">
         <li>
           <Link to={ROUTES.LOGIN}>
-            <button className="btn">Se connecter</button>
+            <button className="btn" onClick={props.handleMenu}>
+              Se connecter
+            </button>
           </Link>
         </li>
         <li>
