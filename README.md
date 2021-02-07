@@ -6,11 +6,12 @@ Payement platform for luxury clothes
 
 ### Page d'accueil
 
-![Screen1](https://github.com/mindflix/gatheway/blob/react/src/images/review1.png?raw=true)
-![Screen2](https://github.com/mindflix/gatheway/blob/react/src/images/review2.png?raw=true)
-![Screen3](https://github.com/mindflix/gatheway/blob/react/src/images/review3.png?raw=true)
-![Screen4](https://github.com/mindflix/gatheway/blob/react/src/images/review4.png?raw=true)
-![Screen5](https://github.com/mindflix/gatheway/blob/react/src/images/review5.png?raw=true)
+![Screen1](https://github.com/mindflix/gatheway/blob/react/src/images/review/review1.png?raw=true)
+![Screen2](https://github.com/mindflix/gatheway/blob/react/src/images/review/review2.png?raw=true)
+![Screen3](https://github.com/mindflix/gatheway/blob/react/src/images/review/review3.png?raw=true)
+![Screen4](https://github.com/mindflix/gatheway/blob/react/src/images/review/review4.png?raw=true)
+![Screen5](https://github.com/mindflix/gatheway/blob/react/src/images/review/review5.png?raw=true)
+![Screen6](https://github.com/mindflix/gatheway/blob/react/src/images/review/review6.png?raw=true)
 
 ## Available Scripts
 
