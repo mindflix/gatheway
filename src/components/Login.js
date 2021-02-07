@@ -70,7 +70,7 @@ function SignUp(props) {
   const [cmdp, setCMDP] = useState("");
   return (
     <form className="form">
-      <span onClick={props.handleNewUser}>
+      <span className="form--group" onClick={props.handleNewUser}>
         <IoArrowUndoOutline size={24} />
       </span>
       <Field
