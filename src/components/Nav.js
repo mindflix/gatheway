@@ -5,7 +5,7 @@ import {
   IoMenuOutline,
   IoSearchOutline,
   IoPersonOutline,
-  IoPricetagsOutline,
+  IoBagHandleOutline,
 } from "react-icons/io5";
 
 function Nav() {
@@ -48,7 +48,7 @@ function Nav() {
               </Link>
             </li>
             <li>
-              <IoPricetagsOutline size={24} />
+              <IoBagHandleOutline size={24} />
             </li>
           </ul>
         </div>

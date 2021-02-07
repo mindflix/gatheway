@@ -1,5 +1,9 @@
 import React, { useState } from "react";
-import { IoArrowBackOutline } from "react-icons/io5";
+import {
+  IoArrowUndoOutline,
+  IoAddOutline,
+  IoEnterOutline,
+} from "react-icons/io5";
 
 function handleChange(handler, e) {
   handler(e.target.value);
@@ -50,9 +54,10 @@ function SignIn(props) {
       <div className="form--group">
         <button type="submit" className="btn">
           Se connecter
+          <IoEnterOutline size={24} />
         </button>
         <p onClick={props.handleNewUser}>
-          Vous n'avez toujours pas de compte ?
+          <p>Vous n'avez toujours pas de compte ?</p>
         </p>
       </div>
     </form>
@@ -66,7 +71,7 @@ function SignUp(props) {
   return (
     <form className="form">
       <span onClick={props.handleNewUser}>
-        <IoArrowBackOutline size={24} />
+        <IoArrowUndoOutline size={24} />
       </span>
       <Field
         name="name"
@@ -92,6 +97,7 @@ function SignUp(props) {
       <div className="form--group">
         <button type="submit" className="btn">
           S'inscrire
+          <IoAddOutline size={24} />
         </button>
       </div>
     </form>
