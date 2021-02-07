@@ -57,7 +57,7 @@ function SignIn(props) {
           <IoEnterOutline size={24} />
         </button>
         <p onClick={props.handleNewUser}>
-          <p>Vous n'avez toujours pas de compte ?</p>
+          Vous n'avez toujours pas de compte ?
         </p>
       </div>
     </form>
