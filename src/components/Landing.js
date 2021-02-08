@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-import section2 from "../images/section2.jpg";
-import section2m from "../images/section2m.jpg";
 import section1 from "../images/section1m.jpg";
 import section1m from "../images/section1.jpg";
 import article from "../images/article.jpg";
@@ -36,19 +34,13 @@ function Landing() {
 
   return (
     <React.Fragment>
-      <div
-        className="parallax"
-        style={{
-          top: `${offsetY * 0.02}vh`,
-          zIndex: 1,
-        }}
-      >
+      <section className="parallax">
         <div className="parallax--bg">
           <img src={isMobile ? section1 : section1m} alt="section1" />
         </div>
         <div
           className="parallax--content"
-          style={{ transform: `translate3d(0,${-offsetY * 0.02}vh,0)` }}
+          style={{ transform: `translateY(${-offsetY * 0.02}vh)` }}
         >
           <div className="wrapper">
             <div className="container">
@@ -66,38 +58,7 @@ function Landing() {
             </div>
           </div>
         </div>
-      </div>
-      <div
-        className="parallax"
-        style={{
-          top: `${6 - offsetY * 0.01}vh`,
-          zIndex: 0,
-        }}
-      >
-        <div className="parallax--bg">
-          <img src={isMobile ? section2m : section2} alt="section1" />
-        </div>
-        <div
-          className="parallax--content"
-          style={{ transform: `translate3d(0,${20 - offsetY * 0.02}vh,0)` }}
-        >
-          <div className="wrapper">
-            <div className="container">
-              <div className="text--banner">
-                <h1>La Sélection Printemps</h1>
-              </div>
-              <div className="grid">
-                <Article />
-                <Article />
-                <Article />
-                <Article />
-                <Article />
-                <Article />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
     </React.Fragment>
   );
 }
