@@ -4,9 +4,9 @@
 
 ![icon](https://github.com/mindflix/gatheway/blob/main/public/favicon.ico?raw=true)
 
-### Frontend répertoire
+### Backend répertoire
 
-https://github.com/mindflix/gatheway
+https://github.com/mindflix/gathewayBack
 
 ### Demo
 
